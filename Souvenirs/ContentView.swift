@@ -10,7 +10,45 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, World!")
+        NavigationView{
+            ZStack {
+                LinearGradient(gradient: Gradient(colors: [.red, .purple, .blue, .green]), startPoint:.topLeading, endPoint: .bottomTrailing).edgesIgnoringSafeArea(.all)
+                
+                VStack(spacing: 40) {
+                    Text("Which kind of message ?")
+                    .foregroundColor(.white)
+                        .font(.largeTitle)
+                        .fontWeight(.black)
+                        .multilineTextAlignment(.center)
+                    
+                    Button(action: {
+                        print("")
+                    }) {
+                        Text("Text")
+                            .frame(width: 200, height: 50)
+                    }
+                    .background(Color.green)
+                    .foregroundColor(.white)
+                    .font(.largeTitle)
+                        
+                    .clipShape(RoundedRectangle(cornerRadius: 8))
+                    
+                    
+                    Button(action: {
+                        print("")
+                    }) {
+                        Text("Voice")
+                            .frame(width: 200, height: 50)
+                    }
+                    .background(Color.purple)
+                    .foregroundColor(.white)
+                    .font(.largeTitle)
+                    .clipShape(RoundedRectangle(cornerRadius: 8))
+                    
+                }
+                Spacer()
+            }
+        }
     }
 }
 
