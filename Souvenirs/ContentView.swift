@@ -21,30 +21,25 @@ struct ContentView: View {
                         .fontWeight(.black)
                         .multilineTextAlignment(.center)
                     
-                    Button(action: {
-                        print("")
-                    }) {
-                        Text("Text")
-                            .frame(width: 200, height: 50)
-                    }
+                    Button("Text") {
+                        //Todo: Implement logics
+                        }
+                    .frame(width: 200, height: 50)
                     .background(Color.green)
                     .foregroundColor(.white)
                     .font(.largeTitle)
-                        
-                    .clipShape(RoundedRectangle(cornerRadius: 8))
+                        .clipShape(RoundedRectangle(cornerRadius: 8))
                     
                     
-                    Button(action: {
-                        print("")
-                    }) {
-                        Text("Voice")
-                            .frame(width: 200, height: 50)
+                    Button("Voice"){
+                        //Todo: Implement logics
                     }
+                        
+                    .frame(width: 200, height: 50)
                     .background(Color.purple)
                     .foregroundColor(.white)
                     .font(.largeTitle)
                     .clipShape(RoundedRectangle(cornerRadius: 8))
-                    
                 }
                 Spacer()
             }
